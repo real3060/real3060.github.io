@@ -1,0 +1,149 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next {
+    border: none;
+    color: transparent;
+    font-size: 0;
+    opacity: 0.8;
+
+    width: 20px;
+    height: 30px;
+    background: url(../slick/slider-arrows.png) no-repeat;    
+
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    margin-top: -15px;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    outline: none;
+    opacity: 1;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+    opacity: .25;
+}
+
+.slick-prev{
+    left: 0px;
+}
+
+.slick-next{
+    right: 0px;
+    background-position: -20px 0;
+}
+
+@media (max-width: 768px) {
+
+    .slick-prev{
+        left: 5px;
+    }
+
+    .slick-next{
+        right: 5px;
+    }  
+
+}
+
+
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: 0;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li {
+    position: relative;
+
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #23bac1;
+    opacity: 1;
+}
+
+.slick-dots li button {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    background: #cfcfcf;
+    border: none;
+    border-radius: 50%;
+    opacity: .8;
+
+    font-size: 0;
+    color: transparent;
+    
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    
+    .slick-dots li {
+        margin: 0 12px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    .slick-dots li button {
+        width: 12px;
+        height: 12px;
+    }
+}
